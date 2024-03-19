@@ -1,0 +1,46 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      backgroundColor: {
+        "primary-color": "#23A6F0",
+        "secondary-color-1": "#23856D",
+        "secondary-color-2": "#3C403D",
+        "dark-background-color": "#252B42",
+        "light-background-color": "#FFFFFF",
+        "success-color": "#2DC071",
+        "alert-color": "#E77C40",
+        "danger-color": "#E74040",
+        "hover-color": "#2A7CC7",
+        "disabled-element-color": "#8EC2F2",
+        "muted-color": "#BDBDBD",
+        "light-gray-1": "#FAFAFA",
+        "light-gray-2": "#ECECEC",
+      },
+      colors: {
+        "primary-text-color": "#23A6F0",
+        "second-text-color": "#737373",
+        "secondary-text-color-1": "#23856D",
+        "secondary-text-color-2": "#3C403D",
+        "dark-text-color": "#252B42",
+        "light-text-color": "#FFFFFF",
+        "success-text-color": "#2DC071",
+        "alert-text-color": "#E77C40",
+        "danger-text-color": "#E74040",
+        "hover-text-color": "#2A7CC7",
+        "disabled-element-text-color": "#8EC2F2",
+        "muted-text-color": "#BDBDBD",
+        "light-text-gray-1": "#FAFAFA",
+        "light-text-gray-2": "#ECECEC",
+        "faded-primary-color": "#B2E3FF",
+        "faded-secondary-color-1": "#B9EAA8",
+        "faded-secondary-color-2": "#FFDCD1",
+      },
+      fontFamily: {
+        montserrat: "Montserrat",
+      },
+    },
+  },
+  plugins: [],
+};
