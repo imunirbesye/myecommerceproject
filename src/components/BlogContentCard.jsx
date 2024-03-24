@@ -3,13 +3,12 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import blog1Image from "../assets/images/unsplash1.png";
 
-export default function BlogContentCard() {
+export default function BlogContentCard() { 
     
-
     return (
         <Link to="/blog/1">
             <div className="w-[20rem] h-[40rem] bg-amber-600 flex flex-col shadow-xl mb-10 font-montserrat">
-                <div className={`w-full h-[20rem] bg-[url('../assets/images/unsplash1.png')] flex items-start`}>
+                <div className="w-full h-[20rem] flex items-start bg-no-repeat bg-cover bg-top"  style={{backgroundImage: `url(${blog1Image})`}}>
                     <span className="px-5 py-1 rounded-md m-3 bg-[#E74040] text-light-text-color font-bold">NEW</span>
                 </div>
                 <div className="w-full h-[20rem] p-5 flex flex-col bg-light-background-color">

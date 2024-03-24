@@ -1,4 +1,4 @@
-import React, { useState } from 'react'   
+import React, { StrictMode, useState } from 'react'   
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -12,17 +12,19 @@ import Blog from './pages/Blog';
 function App() { 
 
   return ( 
-    <BrowserRouter>
-      <Switch> 
-        <Route path="/" exact component={Home} />
-        <Route path="/product/:id" component={ProductPage} />
-        <Route path="/products" component={ProductListPage} />
-        <Route path="/products/:filter" component={ProductListPage} />
-        <Route path="/blog/:id" component={Blog} />
-        <Route path="/acoutUs" component={AboutUs} />
-        <Route path="/contact" component={Contact} />
-      </Switch> 
-    </BrowserRouter>
+    <StrictMode>
+      <BrowserRouter>
+        <Switch> 
+          <Route path="/" exact><Home /></Route>
+          <Route path="/product/:id" children={<ProductPage />} />
+          <Route path="/shop" children={<ProductListPage />} />
+          <Route path="/shop/:filter" children={<ProductListPage />} />
+          <Route path="/blog/:id" children={<Blog />} />
+          <Route path="/acoutUs" children={<AboutUs />} />
+          <Route path="/contact" children={<Contact />} />
+        </Switch> 
+      </BrowserRouter>
+    </StrictMode>
   )
 }
 

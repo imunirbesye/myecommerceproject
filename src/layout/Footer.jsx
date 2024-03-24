@@ -3,10 +3,10 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function Footer() {
     return(
-        <div className="w-full h-[75rem] flex flex-col items-center bg-light-gray-1 font-montserrat lg:flex lg:flex-col lg:items-center lg:h-[28rem]">
-            <div className="w-[25rem] h-[7rem] bg- pt-10 pl-8 lg:w-[75rem] lg:flex lg:flex-row lg:justify-between">
+        <div className="w-full flex flex-col items-center bg-light-background-color font-montserrat lg:flex lg:flex-col lg:items-center lg:h-[28rem]">
+            <div className="w-[25rem] h-[7rem] pt-6 pl-8 lg:w-[78rem] lg:h-[5rem] lg:pr-5 lg:flex lg:flex-row lg:justify-between lg:border-b-[1px]">
                 <span className="text-xl font-bold">Bandage</span>
-                <ul className="flex flex-row mt-3 lg:mt-0">
+                <ul className="flex flex-row mt-3 mb lg:mt-0">
                    <li><i className="fa-brands fa-facebook text-primary-text-color text-2xl mr-4" /></li>
                    <li><i className="fa-brands fa-instagram text-primary-text-color text-2xl mr-4" /></li>
                    <li><i className="fa-brands fa-twitter text-primary-text-color text-2xl" /></li>
@@ -54,8 +54,8 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="w-full h-[7rem] flex flex-row text-center justify-center">
-                <span className="w-88 font-bold text-second-text-color self-center">Made With Love By Finland All Right Reserved</span>
+            <div className="w-full h-[7rem] flex flex-row text-center justify-center bg-light-gray-1">
+                <span className="w-60 font-bold text-second-text-color self-center lg:w-[26rem]">Made With Love By Finland All Right Reserved</span>
             </div>
         </div>
     );

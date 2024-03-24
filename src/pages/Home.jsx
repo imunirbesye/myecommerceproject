@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
-import Menu from '../components/Menu'
+import Header from '../layout/Header'
 import HomeSlider1 from '../components/HomeSlider1'
 import EditorsPick from '../layout/EditorsPick'
 import BestSellerProducts from '../layout/BestSellerProducts'
@@ -13,7 +14,7 @@ export default function Home() {
     
     return (
         <>
-            <Menu />
+            <Header />
             <HomeSlider1 />
             <EditorsPick />
             <BestSellerProducts />

@@ -4,19 +4,6 @@ import 'react-slideshow-image/dist/styles.css'
 
 import coverImage from "../assets/images/image1.jpg";
 
-const spanStyle = {
-    padding: '20px',
-    background: '#efefef',
-    color: '#000000'
-  }
-  
-  const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundSize: 'cover',
-    height: '400px'
-  }
   const slideImages = [
     {
       url: "../assets/images/image1.jpg",
@@ -61,11 +48,11 @@ const spanStyle = {
 
 export default function HomeImageSlider() {
     return (
-        <div className="border-b">
+        <div className="">
             <Slide>
                 {slideImages.map((slideImage, index)=> (
                     <div key={index}>
-                      <div className={`flex items-center bg-slate-600 bg-cover h-[55vh] content-end font-montserrat lg:h-[50vh] lg:content-center lg:items-center lg:justify-center bg-bottom bg-[url('${slideImage.url}')]`}>
+                      <div className={`flex items-center bg-slate-600 bg-cover h-[55vh] content-end font-montserrat lg:h-[70vh] lg:content-center lg:items-center lg:justify-center bg-top`} style={{backgroundImage: `url(${coverImage})`}}>
                           {slideImage.content}
                       </div>
                     </div>

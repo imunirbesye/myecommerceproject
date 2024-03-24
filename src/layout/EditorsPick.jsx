@@ -14,24 +14,24 @@ export default function EditorsPick() {
                 <span className="text-sm text-center text-secondary-text-color-2 w-44 md:w-80 mt-2">Problems trying to resolve the coflict between</span>
 
                 <div className="flex flex-col lg:flex-row">
-                    <Link to="/produts/men">
-                        <div className={`bg-[url('${menBgImage}')] w-[20rem] h-[31rem] border-2 mt-10 flex lg:mt-6 lg:w-[25rem]`}>
+                    <Link to="/shop/men">
+                        <div className={`w-[20rem] h-[31rem] bg-no-repeat bg-cover bg-left-top border-2 mt-10 flex lg:mt-6 lg:w-[25rem]`} style={{backgroundImage: `url(${menBgImage})`}}>
                             <div className="bg-light-background-color w-36 h-11 leading-10 text-center self-end ml-4 mb-4">MEN</div>
                         </div>
                     </Link>
-                    <Link to="/produts/women">
-                        <div className={`bg-[url('${menBgImage}')] w-[20rem] h-[31rem] border-2 mt-6 flex lg:w-[15rem] lg:ml-5`}>
+                    <Link to="/shop/women">
+                        <div className={`w-[20rem] h-[31rem] bg-no-repeat bg-cover bg-left-top border-2 mt-6 flex lg:w-[15rem] lg:ml-5`} style={{backgroundImage: `url(${womenBgImage})`}}>
                             <div className="bg-light-background-color w-36 h-11 leading-10 text-center self-end ml-4 mb-4">WOMEN</div>
                         </div>
                     </Link>
                     <div>
-                        <Link to="/produts/accessories">
-                            <div className={`bg-[url('${menBgImage}')] w-[20rem] h-[15rem] border-2 mt-6 flex basis-1 lg:w-[15rem] lg:ml-5`}>
+                        <Link to="/shop/accessories">
+                            <div className={`w-[20rem] h-[15rem] bg-no-repeat bg-cover bg-left-top border-2 mt-6 flex basis-1 lg:w-[15rem] lg:ml-5`} style={{backgroundImage: `url(${kidsBgImage})`}}>
                                 <div className="bg-light-background-color w-36 h-11 leading-10 text-center self-end ml-4 mb-4">ACCESSORIES</div>
                             </div>
                         </Link>
-                        <Link to="/produts/kids">
-                            <div className={`bg-[url('${menBgImage}')] w-[20rem] h-[15rem] border-2 mt-6 flex basis-1 lg:w-[15rem] lg:mt-4 lg:ml-5`}>
+                        <Link to="/shop/kids">
+                            <div className={`w-[20rem] h-[15rem] bg-no-repeat bg-cover bg-left-top border-2 mt-6 flex basis-1 lg:w-[15rem] lg:mt-4 lg:ml-5`} style={{backgroundImage: `url(${accessoriesBgImage})`}}>
                                 <div className="bg-light-background-color w-36 h-11 leading-10 text-center self-end ml-4 mb-4">KIDS</div>
                             </div>
                         </Link>
