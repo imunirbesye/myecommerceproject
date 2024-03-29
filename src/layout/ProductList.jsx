@@ -7,7 +7,7 @@ export default function ProductList() {
     return(
         <div className="flex flex-col items-center bg-light-background-color">
             <Filter />
-            <div className="flex flex-col items-center lg:w-[83rem] lg:flex-row lg:flex-wrap lg:justify-between">
+            <div className="w-full flex flex-col items-center lg:w-[83rem] lg:flex-row lg:flex-wrap lg:justify-between">
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />

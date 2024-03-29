@@ -6,8 +6,8 @@ import blog1Image from "../assets/images/unsplash1.png";
 export default function BlogContentCard() { 
     
     return (
-        <Link to="/blog/1">
-            <div className="w-[20rem] h-[40rem] bg-amber-600 flex flex-col shadow-xl mb-10 font-montserrat">
+        <Link to="/blog/1" className="min-w-[20rem] w-[85%] max-w-[35rem] flex flex-col items-center self-center">
+            <div className="min-w-[20rem] w-full h-[40rem] bg-red-800 lg:w-[20rem] lg:ml-0 flex flex-col items-center shadow-xl mb-10 font-montserrat">
                 <div className="w-full h-[20rem] flex items-start bg-no-repeat bg-cover bg-top"  style={{backgroundImage: `url(${blog1Image})`}}>
                     <span className="px-5 py-1 rounded-md m-3 bg-[#E74040] text-light-text-color font-bold">NEW</span>
                 </div>

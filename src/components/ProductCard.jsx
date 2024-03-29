@@ -5,9 +5,9 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function ProductCard() {
     return(
-        <Link to="/product/1">
-            <div className="w-[20rem] h-[38rem] mt-8 flex flex-col items-center  font-montserrat">
-                <img src={productImage} className="w-[20rem] h-[27rem]" />
+        <Link to="/product/1" className="w-[85%] max-w-[35rem] lg:w-auto">
+            <div className="min-w-[20rem] w-full max-w-[35rem] h-[38rem] lg:w-[20rem] mt-8 flex flex-col items-center font-montserrat">
+                <img src={productImage} className="min-w-[20rem] w-full lg:w-[20rem] h-[27rem]" />
                 <span className="font-bold text-xl mt-6">Graphic Design</span>
                 <span className="text-second-text-color font-semibold text-lg mt-2">English Department</span>
                 <span className="text-muted-text-color font-bold text-lg mt-3">$16.48 <span className="text-[#23856D]">$6.48</span></span>

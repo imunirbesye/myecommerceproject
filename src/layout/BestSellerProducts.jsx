@@ -7,7 +7,7 @@ export default function BestSellerProducts() {
             <span className="text-second-text-color text-xl">Featured Products</span>
             <span className="text-2xl font-bold w-56 text-center mt-4">BESTSELLER PRODUCTS</span>
             <span className="w-64 text-center mt-4 font-semibold text-second-text-color">Problems trying to resolve the conflict between</span>
-            <div className="lg:w-[83rem] lg:flex lg:flex-row lg:justify-between lg:flex-wrap">
+            <div className="w-full flex flex-col items-center lg:w-[83rem] lg:flex lg:flex-row lg:justify-between lg:flex-wrap">
                 <ProductCard />
                 <ProductCard />
                 <ProductCard />
