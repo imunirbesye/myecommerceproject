@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <div className="font-montserrat">
             <NavbarMobile />
-            <div className="w-full flex flex-col mt-6 hidden">
+            <div className="w-full flex flex-col mt-6 hidden bg-light-background-color">
                 <ul className="menu ">
                     <Link to="/"><li className="w-full h-12 text-center leading-12 text-xl">Home</li></Link>
                     <Link to="/shop"><li className="w-full h-12 text-center leading-12 text-xl">Product</li></Link>

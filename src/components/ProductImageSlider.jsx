@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-import coverImage from "../assets/images/image1.jpg";
+import coverImage from "../assets/images/singleProductCover.jpg";
 
 const slideImages = [
   {
@@ -70,14 +70,14 @@ const slideImages = [
   },
 ];
 
-export default function HomeImageSlider() {
+export default function ProductImageSlider() {
   return (
     <div className="">
       <Slide>
         {slideImages.map((slideImage, index) => (
           <div key={index}>
             <div
-              className={`flex items-center bg-slate-600 bg-cover h-[55vh] content-end font-montserrat lg:h-[70vh] lg:content-center lg:items-center lg:justify-center bg-top`}
+              className={`flex items-center bg-slate-600 bg-cover h-[30vh] content-end font-montserrat lg:h-[70vh] lg:content-center lg:items-center lg:justify-center bg-top`}
               style={{ backgroundImage: `url(${coverImage})` }}
             >
               {slideImage.content}
