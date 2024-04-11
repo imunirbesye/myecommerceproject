@@ -8,12 +8,12 @@ import Footer from "../layout/Footer";
 
 export default function ProductPage() {
   return (
-    <div className="bg-light-gray-1 flex flex-col items-center">
+    <>
       <Header />
       <AboutProduct />
       <ProductMoreDetail />
       <BestSellerProduct />
       <Footer />
-    </div>
+    </>
   );
 }
