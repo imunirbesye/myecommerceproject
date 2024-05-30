@@ -9,6 +9,7 @@ import ProductListPage from "./pages/ProductListPage";
 import ProductPage from "./pages/ProductPage";
 import Blog from "./pages/Blog";
 import Team from "./pages/Team";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/aboutUs" children={<AboutUs />} />
           <Route path="/contact" children={<Contact />} />
           <Route path="/team" children={<Team />} />
+          <Route path="/signup" children={<SignUp />} />
         </Switch>
       </BrowserRouter>
     </StrictMode>
