@@ -24,13 +24,13 @@ export default function AUTeam() {
           </span>
           <div className="w-[125px] flex flex-row justify-between mt-5 text-primary-text-color">
             <Link to="">
-              <i class="fa-brands fa-facebook fa-2xl" />
+              <i className="fa-brands fa-facebook fa-2xl" />
             </Link>
             <Link to="">
-              <i class="fa-brands fa-instagram fa-2xl" />
+              <i className="fa-brands fa-instagram fa-2xl" />
             </Link>
             <Link to="">
-              <i class="fa-brands fa-twitter fa-2xl" />
+              <i className="fa-brands fa-twitter fa-2xl" />
             </Link>
           </div>
         </div>
@@ -42,13 +42,13 @@ export default function AUTeam() {
           </span>
           <div className="w-[125px] flex flex-row justify-between mt-5 text-primary-text-color">
             <Link to="">
-              <i class="fa-brands fa-facebook fa-2xl" />
+              <i className="fa-brands fa-facebook fa-2xl" />
             </Link>
             <Link to="">
-              <i class="fa-brands fa-instagram fa-2xl" />
+              <i className="fa-brands fa-instagram fa-2xl" />
             </Link>
             <Link to="">
-              <i class="fa-brands fa-twitter fa-2xl" />
+              <i className="fa-brands fa-twitter fa-2xl" />
             </Link>
           </div>
         </div>
@@ -60,13 +60,13 @@ export default function AUTeam() {
           </span>
           <div className="w-[125px] flex flex-row justify-between mt-5 text-primary-text-color">
             <Link to="">
-              <i class="fa-brands fa-facebook fa-2xl" />
+              <i className="fa-brands fa-facebook fa-2xl" />
             </Link>
             <Link to="">
-              <i class="fa-brands fa-instagram fa-2xl" />
+              <i className="fa-brands fa-instagram fa-2xl" />
             </Link>
             <Link to="">
-              <i class="fa-brands fa-twitter fa-2xl" />
+              <i className="fa-brands fa-twitter fa-2xl" />
             </Link>
           </div>
         </div>

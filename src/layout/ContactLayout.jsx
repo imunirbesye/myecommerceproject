@@ -22,16 +22,16 @@ export default function ContactLayout() {
         </span>
         <div className="w-[58%] flex flex-row justify-between text-black mt-8 mb-8 md:w-[200px]">
           <Link to="">
-            <i class="fa-brands fa-twitter fa-2xl" />
+            <i className="fa-brands fa-twitter fa-2xl" />
           </Link>
           <Link to="">
-            <i class="fa-brands fa-facebook fa-2xl" />
+            <i className="fa-brands fa-facebook fa-2xl" />
           </Link>
           <Link to="">
-            <i class="fa-brands fa-instagram fa-2xl" />
+            <i className="fa-brands fa-instagram fa-2xl" />
           </Link>
           <Link to="">
-            <i class="fa-brands fa-linkedin fa-2xl" />
+            <i className="fa-brands fa-linkedin fa-2xl" />
           </Link>
         </div>
       </div>

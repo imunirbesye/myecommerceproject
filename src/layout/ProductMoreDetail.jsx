@@ -48,19 +48,19 @@ export default function ProductPage() {
                   the quick fox jumps over
                 </span>
                 <li className="text-lg mt-4 font-semibold text-second-text-color">
-                  <i class="fa-solid fa-chevron-right text-xl" />
+                  <i className="fa-solid fa-chevron-right text-xl" />
                   &nbsp;&nbsp;&nbsp; the quick fox jumps over lazy dog
                 </li>
                 <li className="text-lg mt-4 font-semibold text-second-text-color">
-                  <i class="fa-solid fa-chevron-right text-xl" />
+                  <i className="fa-solid fa-chevron-right text-xl" />
                   &nbsp;&nbsp;&nbsp; the quick fox jumps over lazy dog
                 </li>
                 <li className="text-lg mt-4 font-semibold text-second-text-color">
-                  <i class="fa-solid fa-chevron-right text-xl" />
+                  <i className="fa-solid fa-chevron-right text-xl" />
                   &nbsp;&nbsp;&nbsp; the quick fox jumps over lazy dog
                 </li>
                 <li className="text-lg mt-4 font-semibold text-second-text-color">
-                  <i class="fa-solid fa-chevron-right text-xl" />
+                  <i className="fa-solid fa-chevron-right text-xl" />
                   &nbsp;&nbsp;&nbsp; the quick fox jumps over lazy dog
                 </li>
               </ul>
@@ -69,15 +69,15 @@ export default function ProductPage() {
                   the quick fox jumps over
                 </span>
                 <li className="text-lg mt-4 font-semibold text-second-text-color">
-                  <i class="fa-solid fa-chevron-right text-xl" />
+                  <i className="fa-solid fa-chevron-right text-xl" />
                   &nbsp;&nbsp;&nbsp; the quick fox jumps over lazy dog
                 </li>
                 <li className="text-lg mt-4 font-semibold text-second-text-color">
-                  <i class="fa-solid fa-chevron-right text-xl" />
+                  <i className="fa-solid fa-chevron-right text-xl" />
                   &nbsp;&nbsp;&nbsp; the quick fox jumps over lazy dog
                 </li>
                 <li className="text-lg mt-4 font-semibold text-second-text-color">
-                  <i class="fa-solid fa-chevron-right text-xl" />
+                  <i className="fa-solid fa-chevron-right text-xl" />
                   &nbsp;&nbsp;&nbsp; the quick fox jumps over lazy dog
                 </li>
               </ul>
