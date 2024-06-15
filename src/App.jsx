@@ -10,6 +10,7 @@ import ProductPage from "./pages/ProductPage";
 import Blog from "./pages/Blog";
 import Team from "./pages/Team";
 import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" children={<Contact />} />
           <Route path="/team" children={<Team />} />
           <Route path="/signup" children={<SignUp />} />
+          <Route path="/login" children={<Login />} />
         </Switch>
       </BrowserRouter>
     </StrictMode>

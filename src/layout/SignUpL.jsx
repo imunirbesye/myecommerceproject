@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import { useHistory } from "react-router-dom";
-import { fetchRoles } from "../actions/thunkActions";
+import { fetchRoles } from "../actions/clientReducerActions";
 
 import userImage from "../assets/images/undraw_web_shopping_re_owap.svg";
 

@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import md5 from "md5";
 
 import NavbarMobile from "../components/NavbarMobile";
 
 export default function Header() {
+  const user = useSelector((store) => store.client.user);
+  console.log(user.email);
+  const gravatarUrl = user.email
+    ? `https://www.gravatar.com/avatar/${md5(user.email)}`
+    : "";
+
+  console.log(user.email);
   return (
     <div className="font-montserrat">
       <NavbarMobile />
@@ -63,9 +72,16 @@ export default function Header() {
             </ul>
           </div>
           <div className="flex">
-            <span className="text-primary-text-color font-bold md:mr-4">
-              <i className="fa-regular fa-user" /> Login / Register
-            </span>
+            {user.email ? (
+              <div>
+                <img src={gravatarUrl} alt="User Avatar" />
+                <span>{user.name}</span>
+              </div>
+            ) : (
+              <span className="text-primary-text-color font-bold md:mr-4">
+                <i className="fa-regular fa-user" /> Login / Register
+              </span>
+            )}
             <span className="text-primary-text-color md:mr-4">
               <i className="fa-solid fa-search" />
             </span>
