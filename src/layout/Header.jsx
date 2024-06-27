@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import md5 from "md5";
@@ -7,6 +7,9 @@ import NavbarMobile from "../components/NavbarMobile";
 
 export default function Header() {
   const user = useSelector((store) => store.client.user);
+  useEffect(() => {
+    console.log("User email: " + user?.email);
+  }, [user]);
   console.log(user.email);
   const gravatarUrl = user.email
     ? `https://www.gravatar.com/avatar/${md5(user.email)}`

@@ -40,18 +40,13 @@ const Login = () => {
     setLoading(true);
     const { email, password, rememberMe } = data;
 
-    try {
-      console.log("1");
-      await dispatch(loginUser(email, password, rememberMe));
-      console.log("4");
-      history.goBack(); // Redirect to previous page
-    } catch (error) {
-      toast.error(
-        "Login failed: " + (error.response?.data?.message || "Unknown error")
-      );
-    } finally {
-      setLoading(false);
-    }
+    console.log("1");
+    const deg = await dispatch(loginUser(email, password, rememberMe));
+    console.log(deg);
+    console.log("4");
+    history.push("/"); // Redirect to previous page
+
+    setLoading(false);
   };
 
   return (
