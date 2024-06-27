@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 import image1 from "../assets/images/aboutus2.jpg";
 import image2 from "../assets/images/aboutus3.jpg";

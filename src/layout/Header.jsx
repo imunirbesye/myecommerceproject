@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import md5 from "md5";
 
 import NavbarMobile from "../components/NavbarMobile";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const user = useSelector((store) => store.client.user);
@@ -81,9 +82,12 @@ export default function Header() {
                 <span>{user.name}</span>
               </div>
             ) : (
-              <span className="text-primary-text-color font-bold md:mr-4">
+              <NavLink
+                to="/login"
+                className="text-primary-text-color font-bold md:mr-4"
+              >
                 <i className="fa-regular fa-user" /> Login / Register
-              </span>
+              </NavLink>
             )}
             <span className="text-primary-text-color md:mr-4">
               <i className="fa-solid fa-search" />
