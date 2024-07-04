@@ -9,11 +9,9 @@ import Footer from "../layout/Footer";
 export default function ProductPage() {
   return (
     <>
-      <Header />
       <AboutProduct />
       <ProductMoreDetail />
       <BestSellerProduct />
-      <Footer />
     </>
   );
 }

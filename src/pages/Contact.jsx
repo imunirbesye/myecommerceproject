@@ -8,11 +8,9 @@ import ContactLetsTalk from "../layout/ContactLetsTalk";
 export default function Contact() {
   return (
     <div className="flex flex-col">
-      <Header />
       <ContactLayout />
       <ContactInformations />
       <ContactLetsTalk />
-      <Footer />
     </div>
   );
 }

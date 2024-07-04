@@ -8,14 +8,11 @@ import ClientList from "../layout/ClientList";
 import Footer from "../layout/Footer";
 
 export default function ProductListPage() {
-    
-    return (
-        <div className="bg-light-gray-1">
-            <Header />
-            <ProductCategories />
-            <ProductList />
-            <ClientList />
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="bg-light-gray-1">
+      <ProductCategories />
+      <ProductList />
+      <ClientList />
+    </div>
+  );
 }

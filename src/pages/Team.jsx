@@ -6,9 +6,7 @@ import Footer from "../layout/Footer";
 export default function Team() {
   return (
     <>
-      <Header />
       <TeamLayout />
-      <Footer />
     </>
   );
 }

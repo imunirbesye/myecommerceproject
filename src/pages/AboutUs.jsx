@@ -14,7 +14,6 @@ import AUBigCompanies from "../layout/AUBigCompanies";
 export default function AboutUs() {
   return (
     <div className="flex flex-col">
-      <Header />
       <AUGetQuote />
       <AUProblemsT />
       <AUNumbers />
@@ -23,7 +22,6 @@ export default function AboutUs() {
       <AUBigCompanies />
       <ClientList />
       <AUWorkWithUs />
-      <Footer />
     </div>
   );
 }
