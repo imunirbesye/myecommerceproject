@@ -8,15 +8,11 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const user = useSelector((store) => store.client.user);
-  useEffect(() => {
-    console.log("User email: " + user?.email);
-  }, [user]);
-  console.log(user.email);
+
   const gravatarUrl = user.email
     ? `https://www.gravatar.com/avatar/${md5(user.email)}`
     : "";
 
-  console.log(user.email);
   return (
     <div className="font-montserrat">
       <NavbarMobile />
@@ -75,11 +71,15 @@ export default function Header() {
               </Link>
             </ul>
           </div>
-          <div className="flex">
+          <div className="flex flex-row items-center">
             {user.email ? (
-              <div>
-                <img src={gravatarUrl} alt="User Avatar" />
-                <span>{user.name}</span>
+              <div className=" flex flex-row items-center mr-4">
+                <img
+                  src={gravatarUrl}
+                  className="w-8 h-8 mr-2"
+                  alt="User Avatar"
+                />
+                <span className="font-bold">{user.name}</span>
               </div>
             ) : (
               <NavLink
