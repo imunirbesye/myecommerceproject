@@ -1,9 +1,12 @@
 import React from "react";
 
 import category1 from "../assets/images/media-bg-cover.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function ProductCategories() {
+  const categories = useSelector((store) => store.product.categories);
+  categories.sort((a, b) => b.rating - a.rating);
   return (
     <div className="w-full px-2 py-2 flex flex-col items-center">
       <div className="w-full flex flex-col lg:w-[83rem]">
@@ -11,7 +14,7 @@ export default function ProductCategories() {
           <span className="font-bold text-2xl">Shop</span>
           <span className="mt-14 mb-10 lg:mt-0 lg:mb-0">
             <span className="font-bold">
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </span>{" "}
             <i className="fa-solid fa-chevron-right" /> Shop
           </span>
@@ -26,12 +29,12 @@ export default function ProductCategories() {
               }
               className="w-full flex flex-col items-center"
             >
-            <div
+              <div
                 className="w-full min-h-[15rem] max-w-[35rem] h-[22rem] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-2xl text-light-text-color font-bold mb-5 lg:w-[16rem] lg:h-[16rem]"
                 style={{ backgroundImage: `url(${cat.img})` }}
-            >
+              >
                 <span className="">{cat.title}</span>
-            </div>
+              </div>
             </NavLink>
           ))}
         </div>

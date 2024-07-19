@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import md5 from "md5";
 
 import NavbarMobile from "../components/NavbarMobile";
@@ -19,24 +18,30 @@ export default function Header() {
       <NavbarMobile />
       <div className="w-full flex flex-col mt-6 hidden bg-light-background-color">
         <ul className="menu ">
-          <Link to="/">
-            <li className="w-full h-12 text-center leading-12 text-xl">Home</li>
-          </Link>
-          <Link to="/shop">
-            <li className="w-full h-12 text-center leading-12 text-xl">
-              Product
-            </li>
-          </Link>
-          <Link to="/shop">
-            <li className="w-full h-12 text-center leading-12 text-xl">
-              Pricing
-            </li>
-          </Link>
-          <Link to="/contact">
-            <li className="w-full h-12 text-center leading-12 text-xl">
-              Contact
-            </li>
-          </Link>
+          <NavLink
+            to="/"
+            className="w-full h-12 text-center leading-12 text-xl"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/shop"
+            className="w-full h-12 text-center leading-12 text-xl"
+          >
+            Product
+          </NavLink>
+          <NavLink
+            to="/shop"
+            className="w-full h-12 text-center leading-12 text-xl"
+          >
+            Pricing
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className="w-full h-12 text-center leading-12 text-xl"
+          >
+            Contact
+          </NavLink>
         </ul>
       </div>
       <div className="hidden md:flex flex-row justify-center w-full h-20 bg-white items-center px-10">
@@ -44,8 +49,16 @@ export default function Header() {
           <div className="flex h-20 items-center">
             <span className="text-2xl font-bold">MBStore</span>
             <ul className="flex md:ml-7 lg:ml-24">
+              <NavLink to="/" className="font-bold mr-4 md:mr-3">
+                Home
+              </NavLink>
               <div className="group ">
+                <NavLink
+                  to="/shop"
+                  className="font-bold text-second-text-color mr-4 md:mr-3"
+                >
                   Shop <i className="" />
+                </NavLink>
                 <div className="hidden flex-col absolute z-10 bg-light-background-color group-hover:flex">
                   <span className="px-5 py-2 mt-1 font-bold">Erkek</span>
                   {categories.map(
@@ -93,22 +106,30 @@ export default function Header() {
                   )}
                 </div>
               </div>
-                  About
-                </li>
-              </Link>
-              <Link to="/blog">
-                <li className="font-bold text-second-text-color mr-4 md:mr-3">
-                  Blog
-                </li>
-              </Link>
-              <Link to="/contact">
-                <li className="font-bold text-second-text-color mr-4 md:mr-3">
-                  Contact
-                </li>
-              </Link>
-              <Link to="/products">
-                <li className="font-bold text-second-text-color">Pages</li>
-              </Link>
+              <NavLink
+                to="/aboutUs"
+                className="font-bold text-second-text-color mr-4 md:mr-3"
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className="font-bold text-second-text-color mr-4 md:mr-3"
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className="font-bold text-second-text-color mr-4 md:mr-3"
+              >
+                Contact
+              </NavLink>
+              <NavLink
+                to="/products"
+                className="font-bold text-second-text-color mr-4 md:mr-3"
+              >
+                Pages
+              </NavLink>
             </ul>
           </div>
           <div className="flex flex-row items-center">
