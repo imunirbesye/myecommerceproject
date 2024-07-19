@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { axiosInstance } from "./ApiControl";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -17,11 +17,16 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import { setUser } from "./actions/clientReducerActions";
 import { Toaster } from "react-hot-toast";
-const axiosInstance = axios.create({
-  baseURL: "https://workintech-fe-ecommerce.onrender.com",
-});
+import { fetchCategories } from "./actions/productReducerActions";
 
+let categories = [];
 function App() {
+  const dispatch = useDispatch();
+
+  if (categories[0] == null) {
+    dispatch(fetchCategories(dispatch));
+    categories = useSelector((store) => store.product.categories);
+  }
   const getTkn = localStorage.getItem("Authorization");
   if (getTkn) {
     const dispatch = useDispatch();

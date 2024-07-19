@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const user = useSelector((store) => store.client.user);
+  const categories = useSelector((store) => store.product.categories);
 
   const gravatarUrl = user.email
     ? `https://www.gravatar.com/avatar/${md5(user.email)}`
@@ -43,16 +44,55 @@ export default function Header() {
           <div className="flex h-20 items-center">
             <span className="text-2xl font-bold">MBStore</span>
             <ul className="flex md:ml-7 lg:ml-24">
-              <Link to="/">
-                <li className="font-bold mr-4 md:mr-3">Home</li>
-              </Link>
-              <Link to="/shop">
-                <li className="font-bold text-second-text-color mr-4 md:mr-3">
+              <div className="group ">
                   Shop <i className="" />
-                </li>
-              </Link>
-              <Link to="/aboutUs">
-                <li className="font-bold text-second-text-color mr-4 md:mr-3">
+                <div className="hidden flex-col absolute z-10 bg-light-background-color group-hover:flex">
+                  <span className="px-5 py-2 mt-1 font-bold">Erkek</span>
+                  {categories.map(
+                    (cat) =>
+                      cat.gender == "e" && (
+                        <NavLink
+                          to={
+                            cat.gender == "k"
+                              ? `shop/kadin/${cat.code.substring(
+                                  2,
+                                  cat.code.length
+                                )}`
+                              : `shop/erkek/${cat.code.substring(
+                                  2,
+                                  cat.code.length
+                                )}`
+                          }
+                          className="px-5 py-2 font-semibold text-second-text-color hover:bg-slate-700 hover:text-light-text-color"
+                        >
+                          &nbsp;&nbsp;{cat.title}
+                        </NavLink>
+                      )
+                  )}
+                  <span className="px-5 py-2 mt-1 font-bold">Kadın</span>
+                  {categories.map(
+                    (cat) =>
+                      cat.gender == "k" && (
+                        <NavLink
+                          to={
+                            cat.gender == "k"
+                              ? `shop/kadin/${cat.code.substring(
+                                  2,
+                                  cat.code.length
+                                )}`
+                              : `shop/erkek/${cat.code.substring(
+                                  2,
+                                  cat.code.length
+                                )}`
+                          }
+                          className="px-5 py-2 font-semibold text-second-text-color hover:bg-slate-700 hover:text-light-text-color"
+                        >
+                          &nbsp;&nbsp;{cat.title}
+                        </NavLink>
+                      )
+                  )}
+                </div>
+              </div>
                   About
                 </li>
               </Link>

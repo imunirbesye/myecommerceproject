@@ -17,51 +17,23 @@ export default function ProductCategories() {
           </span>
         </div>
         <div className="w-full flex flex-col items-center lg:flex-row lg:justify-between">
-          <Link to="/shop/cloths" className="w-full flex flex-col items-center">
-            <div
-              className="w-full min-h-[15rem] max-w-[35rem] h-[22rem] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-light-text-color font-bold mb-5 lg:w-[16rem] lg:h-[16rem]"
-              style={{ backgroundImage: `url(${category1})` }}
+          {categories.slice(0, 5).map((cat) => (
+            <NavLink
+              to={
+                cat.gender == "k"
+                  ? `shop/kadin/${cat.code.substring(2, cat.code.length)}`
+                  : `shop/erkek/${cat.code.substring(2, cat.code.length)}`
+              }
+              className="w-full flex flex-col items-center"
             >
-              <span className="mb-4">CLOTHS</span>
-              <span>5 Items</span>
-            </div>
-          </Link>
-          <Link to="/shop/cloths" className="w-full flex flex-col items-center">
             <div
-              className="w-full min-h-[15rem] max-w-[35rem] h-[22rem] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-light-text-color font-bold mb-5 lg:w-[16rem] lg:h-[16rem]"
-              style={{ backgroundImage: `url(${category1})` }}
+                className="w-full min-h-[15rem] max-w-[35rem] h-[22rem] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-2xl text-light-text-color font-bold mb-5 lg:w-[16rem] lg:h-[16rem]"
+                style={{ backgroundImage: `url(${cat.img})` }}
             >
-              <span className="mb-4">CLOTHS</span>
-              <span>5 Items</span>
+                <span className="">{cat.title}</span>
             </div>
-          </Link>
-          <Link to="/shop/cloths" className="w-full flex flex-col items-center">
-            <div
-              className="w-full min-h-[15rem] max-w-[35rem] h-[22rem] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-light-text-color font-bold mb-5 lg:w-[16rem] lg:h-[16rem]"
-              style={{ backgroundImage: `url(${category1})` }}
-            >
-              <span className="mb-4">CLOTHS</span>
-              <span>5 Items</span>
-            </div>
-          </Link>
-          <Link to="/shop/cloths" className="w-full flex flex-col items-center">
-            <div
-              className="w-full min-h-[15rem] max-w-[35rem] h-[22rem] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-light-text-color font-bold mb-5 lg:w-[16rem] lg:h-[16rem]"
-              style={{ backgroundImage: `url(${category1})` }}
-            >
-              <span className="mb-4">CLOTHS</span>
-              <span>5 Items</span>
-            </div>
-          </Link>
-          <Link to="/shop/cloths" className="w-full flex flex-col items-center">
-            <div
-              className="w-full min-h-[15rem] max-w-[35rem] h-[22rem] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-light-text-color font-bold mb-5 lg:w-[16rem] lg:h-[16rem]"
-              style={{ backgroundImage: `url(${category1})` }}
-            >
-              <span className="mb-4">CLOTHS</span>
-              <span>5 Items</span>
-            </div>
-          </Link>
+            </NavLink>
+          ))}
         </div>
       </div>
     </div>
