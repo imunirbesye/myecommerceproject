@@ -1,5 +1,6 @@
 import axios from "axios";
 import { axiosInstance } from "../ApiControl";
+
 export const SET_CATEGORIES = "SET_CATEGORIES";
 export const SET_PRODUCT_LIST = "SET_PRODUCT_LIST";
 export const SET_TOTAL = "SET_TOTAL";
@@ -24,6 +25,7 @@ export const setFetchState = (fetchState) => ({
 export const setLimit = (limit) => ({ type: SET_LIMIT, payload: limit });
 export const setOffset = (offset) => ({ type: SET_OFFSET, payload: offset });
 export const setFilter = (filter) => ({ type: SET_FILTER, payload: filter });
+
 export const fetchCategories = () => async (dispatch) => {
   axiosInstance
     .get("/categories")

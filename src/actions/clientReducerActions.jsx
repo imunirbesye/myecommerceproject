@@ -7,10 +7,6 @@ export const SET_ROLES = "SET_ROLES";
 export const SET_THEME = "SET_THEME";
 export const SET_LANGUAGE = "SET_LANGUAGE";
 
-const axiosInstance = axios.create({
-  baseURL: "https://workintech-fe-ecommerce.onrender.com",
-});
-
 export const setUser = (user) => {
   return { type: SET_USER, payload: user };
 };
@@ -48,12 +44,10 @@ export const loginUser = (email, password, rememberMe) => async (dispatch) => {
       password: password,
     })
     .then(function (response) {
-      console.log(response);
       const user = {
         email: response.data.email,
         role_id: response.data.role_id,
       };
-      console.log(user);
       const token = response.data.token;
       if (rememberMe) {
         localStorage.setItem("Authorization", token);

@@ -8,10 +8,6 @@ import { fetchRoles } from "../actions/clientReducerActions";
 
 import userImage from "../assets/images/undraw_web_shopping_re_owap.svg";
 
-const axiosInstance = axios.create({
-  baseURL: "https://workintech-fe-ecommerce.onrender.com",
-});
-
 const SignUpL = () => {
   const dispatch = useDispatch();
 
