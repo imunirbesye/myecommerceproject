@@ -41,29 +41,7 @@ export const fetchRoles = () => {
 };
 
 export const loginUser = (email, password, rememberMe) => async (dispatch) => {
-  /*try {
-    const response = await axiosInstance.post("/login", {
-      email: email,
-      password: password,
-    });
-    console.log(response.data);
-    const user = {
-      email: response.data.email,
-      role_id: response.data.role_id,
-    };
-    console.log(user);
-    const token = response.data.token;
-    if (rememberMe) {
-      localStorage.setItem("token", token);
-    }
-
-    dispatch(setUser(user));
-    //console.log(useSelector((store) => store.client.user));
-  } catch (error) {
-    throw error;
-  }*/
-
-  axiosInstance
+  return axiosInstance
     .post("/login", {
       email: email,
       password: password,
@@ -77,7 +55,7 @@ export const loginUser = (email, password, rememberMe) => async (dispatch) => {
       console.log(user);
       const token = response.data.token;
       if (rememberMe) {
-        localStorage.setItem("token", token);
+        localStorage.setItem("Authorization", token);
       }
 
       dispatch(setUser(user));

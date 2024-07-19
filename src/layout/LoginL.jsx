@@ -42,9 +42,7 @@ const Login = () => {
 
     console.log("1");
     const deg = await dispatch(loginUser(email, password, rememberMe));
-    console.log(deg);
-    console.log("4");
-    history.push("/"); // Redirect to previous page
+    if (deg) history.push("/");
 
     setLoading(false);
   };
