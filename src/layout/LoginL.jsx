@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../actions/clientReducerActions";
 import { useHistory } from "react-router-dom";
-import { toast } from "react-toastify";
 
 import userImage from "../assets/images/undraw_web_shopping_re_owap.svg";
 
@@ -36,11 +35,8 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
-    console.log(data);
     setLoading(true);
     const { email, password, rememberMe } = data;
-
-    console.log("1");
     const deg = await dispatch(loginUser(email, password, rememberMe));
     if (deg) history.push("/");
 
