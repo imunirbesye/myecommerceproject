@@ -16,7 +16,7 @@ import Team from "./pages/Team";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import { setUser } from "./actions/clientReducerActions";
-
+import { Toaster } from "react-hot-toast";
 const axiosInstance = axios.create({
   baseURL: "https://workintech-fe-ecommerce.onrender.com",
 });
@@ -39,6 +39,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Toaster position="top-right" reverseOrder={false} />
       <Header />
       <Switch>
         <Route path="/" exact>

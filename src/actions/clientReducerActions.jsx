@@ -1,5 +1,6 @@
 import axios from "axios";
 import { axiosInstance } from "../ApiControl";
+import toast from "react-hot-toast";
 
 export const SET_USER = "SET_USER";
 export const SET_ROLES = "SET_ROLES";
@@ -62,7 +63,7 @@ export const loginUser = (email, password, rememberMe) => async (dispatch) => {
       return true;
     })
     .catch(function (error) {
-      console.log(error);
+      toast("Wrong email or password");
       return false;
     });
 };
