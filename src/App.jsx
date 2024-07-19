@@ -20,6 +20,7 @@ import { Toaster } from "react-hot-toast";
 import { fetchCategories } from "./actions/productReducerActions";
 
 let categories = [];
+let user = null;
 function App() {
   const dispatch = useDispatch();
 
@@ -28,8 +29,7 @@ function App() {
     categories = useSelector((store) => store.product.categories);
   }
   const getTkn = localStorage.getItem("Authorization");
-  if (getTkn) {
-    const dispatch = useDispatch();
+  if (getTkn && user == null) {
     axiosInstance.defaults.headers.common["Authorization"] = getTkn;
     axiosInstance
       .get("/verify")
