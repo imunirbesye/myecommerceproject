@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { axiosInstance } from "./ApiControl";
@@ -28,6 +28,7 @@ function App() {
     dispatch(fetchCategories(dispatch));
     categories = useSelector((store) => store.product.categories);
   }
+
   const getTkn = localStorage.getItem("Authorization");
   if (getTkn && user == null) {
     axiosInstance.defaults.headers.common["Authorization"] = getTkn;
@@ -35,6 +36,7 @@ function App() {
       .get("/verify")
       .then((response) => {
         dispatch(setUser(response.data));
+        user = 1;
       })
       .catch((error) => {
         axiosInstance.defaults.headers.common["Authorization"].delete;
@@ -53,14 +55,33 @@ function App() {
         <Route path="/login">
           <Login />
         </Route>
-        <Route path="/product/:id" children={<ProductPage />} />
-        <Route path="/shop" children={<ProductListPage />} />
-        <Route path="/shop/:filter" children={<ProductListPage />} />
-        <Route path="/blog/:id" children={<Blog />} />
-        <Route path="/aboutUs" children={<AboutUs />} />
-        <Route path="/contact" children={<Contact />} />
-        <Route path="/team" children={<Team />} />
-        <Route path="/signup" children={<SignUp />} />
+        <Route path="/product/:id">
+          <ProductPage />
+        </Route>
+        <Route path="/shop">
+          <ProductListPage />
+        </Route>
+        <Route path="/shop/:gender/:category">
+          <ProductListPage />
+        </Route>
+        <Route path="/shop/:filter">
+          <ProductListPage />
+        </Route>
+        <Route path="/blog/:id">
+          <Blog />
+        </Route>
+        <Route path="/aboutUs">
+          <AboutUs />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/team">
+          <Team />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
+        </Route>
       </Switch>
       <Footer />
     </BrowserRouter>
