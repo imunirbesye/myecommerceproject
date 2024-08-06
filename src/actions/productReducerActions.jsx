@@ -36,3 +36,18 @@ export const fetchCategories = () => async (dispatch) => {
       console.log(err);
     });
 };
+
+export const fetchProducts = () => async (dispatch) => {
+  dispatch(setFetchState("FETCHING"));
+  axiosInstance
+    .get("/products")
+    .then((res) => {
+      dispatch(setProductList(res.data.products));
+      dispatch(setTotal(res.data.total));
+      dispatch(setFetchState("FETCHED"));
+    })
+    .catch((err) => {
+      console.log(err);
+      dispatch(setFetchState("FAILED"));
+    });
+};

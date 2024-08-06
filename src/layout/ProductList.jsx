@@ -2,24 +2,17 @@ import React from "react";
 
 import Filter from "../components/Filter";
 import ProductCard from "../components/ProductCard";
+import { useSelector } from "react-redux";
 
 export default function ProductList() {
-    return(
+  const fetchState = useSelector((store) => store.product.fetchState);
+  let products = new Array();
+  products = useSelector((store) => store.product.productList);
+  products.sort((a, b) => a.id - b.id);
         <div className="flex flex-col items-center bg-light-background-color">
             <Filter />
             <div className="w-full flex flex-col items-center lg:w-[83rem] lg:flex-row lg:flex-wrap lg:justify-between">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+          products.map((product) => <ProductCard prdct={product} />)
             </div>
             <div className="flex flex-row items-center justify-center my-12 mb-20">
                 <ul className="flex flex-row">

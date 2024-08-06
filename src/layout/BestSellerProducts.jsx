@@ -2,6 +2,7 @@ import React from "react";
 import ProductCard from "../components/ProductCard";
 
 export default function BestSellerProducts() {
+  const products = useSelector((store) => store.product.productList);
   return (
     <section className="w-full bg-light-background-color flex flex-col items-center py-16  font-montserrat">
       <span className="text-second-text-color text-xl">Featured Products</span>

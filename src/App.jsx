@@ -17,16 +17,18 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import { setUser } from "./actions/clientReducerActions";
 import { Toaster } from "react-hot-toast";
-import { fetchCategories } from "./actions/productReducerActions";
+  fetchProducts,
 
-let categories = [];
+let products = null;
 let user = null;
 function App() {
   const dispatch = useDispatch();
 
   if (categories[0] == null) {
     dispatch(fetchCategories(dispatch));
-    categories = useSelector((store) => store.product.categories);
+  if (products == null) {
+    dispatch(fetchProducts(dispatch));
+    products = 1;
   }
 
   const getTkn = localStorage.getItem("Authorization");
