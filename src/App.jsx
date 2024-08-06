@@ -17,15 +17,23 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import { setUser } from "./actions/clientReducerActions";
 import { Toaster } from "react-hot-toast";
+import {
+  fetchCategories,
   fetchProducts,
+} from "./actions/productReducerActions";
 
+let categories = null;
 let products = null;
 let user = null;
+
 function App() {
   const dispatch = useDispatch();
 
-  if (categories[0] == null) {
+  if (categories == null) {
     dispatch(fetchCategories(dispatch));
+    categories = 1;
+  }
+
   if (products == null) {
     dispatch(fetchProducts(dispatch));
     products = 1;
