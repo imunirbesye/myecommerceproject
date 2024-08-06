@@ -7,24 +7,6 @@ import { useHistory } from "react-router-dom";
 import userImage from "../assets/images/undraw_web_shopping_re_owap.svg";
 
 const Login = () => {
-  /*
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = async (data) => {
-    const result = await dispatch(loginUser(data));
-    if (result.success) {
-      history.goBack() || history.push("/");
-    } else {
-      toast.error("Login failed. Please check your credentials.");
-    }
-  };
-*/
   const {
     register,
     handleSubmit,
