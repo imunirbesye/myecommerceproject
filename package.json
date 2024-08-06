@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "axios": "^1.6.7",
+    "mbstore": "file:",
     "md5": "^2.3.0",
     "react": "^18.3.1",
+    "react-content-loader": "^7.0.2",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.51.4",
     "react-hot-toast": "^2.4.1",
@@ -21,6 +23,7 @@
     "react-router-dom": "5.1",
     "react-slideshow-image": "^4.3.0",
     "react-toastify": "^10.0.4",
+    "reactstrap": "^9.2.2",
     "redux": "^5.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^3.1.0"
