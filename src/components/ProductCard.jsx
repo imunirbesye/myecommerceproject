@@ -1,6 +1,5 @@
 import React from "react";
 
-import productImage from "../assets/images/product-cover-5.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
