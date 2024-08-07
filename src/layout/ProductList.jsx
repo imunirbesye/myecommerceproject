@@ -13,10 +13,12 @@ export default function ProductList() {
   products.sort((a, b) => a.id - b.id);
 
   return (
-        <div className="flex flex-col items-center bg-light-background-color">
-            <Filter />
-            <div className="w-full flex flex-col items-center lg:w-[83rem] lg:flex-row lg:flex-wrap lg:justify-between">
-        {fetchState == "FETCHING" ? (
+    <div className="flex flex-col items-center bg-light-background-color">
+      <Filter />
+      <div className="w-full flex flex-col items-center lg:w-[83rem] lg:flex-row lg:flex-wrap lg:justify-between">
+        {fetchState == "FETCHED" ? (
+          products.map((product) => <ProductCard prdct={product} />)
+        ) : (
           <ContentLoader
             speed={1}
             width={300}
@@ -35,13 +37,11 @@ export default function ProductList() {
             <circle cx="161" cy="545" r="8" />
             <circle cx="178" cy="545" r="8" />
           </ContentLoader>
-        ) : (
-          products.map((product) => <ProductCard prdct={product} />)
         )}
-            </div>
-            <div className="flex flex-row items-center justify-center my-12 mb-20">
+      </div>
+      <div className="flex flex-row items-center justify-center my-12 mb-20">
         <PaginationC />
-            </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 }
