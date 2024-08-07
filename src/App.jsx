@@ -71,6 +71,9 @@ function App() {
         <Route path="/shop">
           <ProductListPage />
         </Route>
+        <Route path="/shop/:page">
+          <ProductListPage />
+        </Route>
         <Route path="/shop/:gender/:category">
           <ProductListPage />
         </Route>
