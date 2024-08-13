@@ -5,6 +5,7 @@ import { loginUser } from "../actions/clientReducerActions";
 import { useHistory } from "react-router-dom";
 
 import userImage from "../assets/images/undraw_web_shopping_re_owap.svg";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Login = () => {
   const {
@@ -36,21 +37,18 @@ const Login = () => {
           <div className="text-sm font-medium text-center text-gray-500">
             <ul className="flex flex-wrap -mb-px">
               <li className="">
-                <a
-                  href="#"
-                  className="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
-                >
+                <a className="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500">
                   LOGIN
                 </a>
               </li>
               <li className="">
-                <a
-                  href="#"
+                <Link
+                  to="/signup"
                   className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                   aria-current="page"
                 >
                   SIGN UP
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
