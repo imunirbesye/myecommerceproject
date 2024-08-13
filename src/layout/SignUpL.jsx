@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
+import { useDispatch } from "react-redux";
 import { axiosInstance } from "../ApiControl";
 import { useForm, Controller } from "react-hook-form";
 import { useHistory } from "react-router-dom";
