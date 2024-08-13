@@ -5,6 +5,7 @@ import { axiosInstance } from "../ApiControl";
 import { useForm, Controller } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { fetchRoles } from "../actions/clientReducerActions";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import userImage from "../assets/images/undraw_web_shopping_re_owap.svg";
 
@@ -61,12 +62,12 @@ const SignUpL = () => {
           <div className="text-sm font-medium text-center text-gray-500">
             <ul className="flex flex-wrap -mb-px">
               <li className="">
-                <a
-                  href="#"
+                <Link
+                  to="/login"
                   className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                 >
                   LOGIN
-                </a>
+                </Link>
               </li>
               <li className="">
                 <a
