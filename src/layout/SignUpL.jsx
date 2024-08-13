@@ -145,7 +145,7 @@ const SignUpL = () => {
               <Controller
                 name="role_id"
                 control={control}
-                defaultValue=""
+                defaultValue="3"
                 render={({ field }) => (
                   <select
                     {...field}
