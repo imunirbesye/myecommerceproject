@@ -32,6 +32,7 @@ const SignUpL = () => {
   }, []);
 
   const onSubmit = async (data) => {
+    delete data.passwordConfirm;
     setIsSubmitting(true);
     try {
       await axiosInstance.post("/signup", data);
