@@ -1,4 +1,3 @@
-import axios from "axios";
 import { axiosInstance } from "../ApiControl";
 import { useSelector } from "react-redux";
 
@@ -47,6 +46,7 @@ export const fetchCategories = () => async (dispatch) => {
 
 export const fetchProducts = () => async (dispatch) => {
   dispatch(setFetchState("FETCHING"));
+
   let categoryId = useSelector((store) => store.product.categoryId);
 
   let filter = useSelector((store) => store.product.filter);

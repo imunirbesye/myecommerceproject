@@ -9,6 +9,7 @@ export default function Filter() {
     dispatch(setSort(evnt.target.value));
     dispatch(fetchProducts(dispatch));
   };
+
   return (
     <div className="w-full h-60 bg-light-background-color flex flex-col p-5 items-center lg:flex-row lg:justify-center lg:h-28 lg:p-0 lg:align-middle">
       <div className="flex flex-col items-center lg:w-[83rem] lg:flex lg:flex-row lg:justify-between">
