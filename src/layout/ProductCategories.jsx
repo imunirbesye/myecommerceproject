@@ -24,8 +24,12 @@ export default function ProductCategories() {
             <NavLink
               to={
                 cat.gender == "k"
-                  ? `shop/kadin/${cat.code.substring(2, cat.code.length)}`
-                  : `shop/erkek/${cat.code.substring(2, cat.code.length)}`
+                  ? `shop/kadin/${cat.code.substring(2, cat.code.length)}/${
+                      cat.id
+                    }`
+                  : `shop/erkek/${cat.code.substring(2, cat.code.length)}/${
+                      cat.id
+                    }`
               }
               className="w-full flex flex-col items-center"
             >
