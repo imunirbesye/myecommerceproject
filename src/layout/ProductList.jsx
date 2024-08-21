@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Filter from "../components/Filter";
 import ProductCard from "../components/ProductCard";
@@ -10,14 +10,19 @@ export default function ProductList() {
   const fetchState = useSelector((store) => store.product.fetchState);
   let products = new Array();
   products = useSelector((store) => store.product.productList);
-  products.sort((a, b) => a.id - b.id);
+
+  if (products != null) products.sort((a, b) => a.id - b.id);
 
   return (
     <div className="flex flex-col items-center bg-light-background-color">
       <Filter />
       <div className="w-full flex flex-col items-center lg:w-[83rem] lg:flex-row lg:flex-wrap lg:justify-between">
         {fetchState == "FETCHED" ? (
-          products.map((product) => <ProductCard prdct={product} />)
+          products.length != 0 ? (
+            products.map((product) => <ProductCard prdct={product} />)
+          ) : (
+            <span>NO PRODUCTS</span>
+          )
         ) : (
           <ContentLoader
             speed={1}
