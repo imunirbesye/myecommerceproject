@@ -68,16 +68,16 @@ function App() {
         <Route path="/product/:id">
           <ProductPage />
         </Route>
-        <Route path="/shop">
+        <Route path="/shop/:gender/:category?/:categoryId">
+          <ProductListPage />
+        </Route>
+        <Route path="/shop/:filter">
           <ProductListPage />
         </Route>
         <Route path="/shop/:page">
           <ProductListPage />
         </Route>
-        <Route path="/shop/:gender/:category">
-          <ProductListPage />
-        </Route>
-        <Route path="/shop/:filter">
+        <Route path="/shop">
           <ProductListPage />
         </Route>
         <Route path="/blog/:id">

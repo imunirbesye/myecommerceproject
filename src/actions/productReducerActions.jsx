@@ -1,5 +1,6 @@
 import axios from "axios";
 import { axiosInstance } from "../ApiControl";
+import { useSelector } from "react-redux";
 
 export const SET_CATEGORIES = "SET_CATEGORIES";
 export const SET_PRODUCT_LIST = "SET_PRODUCT_LIST";
@@ -8,6 +9,8 @@ export const SET_FETCH_STATE = "SET_FETCH_STATE";
 export const SET_LIMIT = "SET_LIMIT";
 export const SET_OFFSET = "SET_OFFSET";
 export const SET_FILTER = "SET_FILTER";
+export const SET_SORT = "SET_SORT";
+export const SET_CATEGORYID = "SET_CATEGORYID";
 
 export const setCategories = (categories) => ({
   type: SET_CATEGORIES,
@@ -39,8 +42,10 @@ export const fetchCategories = () => async (dispatch) => {
 
 export const fetchProducts = () => async (dispatch) => {
   dispatch(setFetchState("FETCHING"));
+  let categoryId = useSelector((store) => store.product.categoryId);
+  let query = "/products";
   axiosInstance
-    .get("/products")
+    .get(query)
     .then((res) => {
       dispatch(setProductList(res.data.products));
       dispatch(setTotal(res.data.total));

@@ -70,11 +70,11 @@ export default function Header() {
                               ? `shop/kadin/${cat.code.substring(
                                   2,
                                   cat.code.length
-                                )}`
+                                )}/${cat.id}`
                               : `shop/erkek/${cat.code.substring(
                                   2,
                                   cat.code.length
-                                )}`
+                                )}/${cat.id}`
                           }
                           className="px-5 py-2 font-semibold text-second-text-color hover:bg-slate-700 hover:text-light-text-color"
                         >
@@ -92,11 +92,11 @@ export default function Header() {
                               ? `shop/kadin/${cat.code.substring(
                                   2,
                                   cat.code.length
-                                )}`
+                                )}/${cat.id}`
                               : `shop/erkek/${cat.code.substring(
                                   2,
                                   cat.code.length
-                                )}`
+                                )}/${cat.id}`
                           }
                           className="px-5 py-2 font-semibold text-second-text-color hover:bg-slate-700 hover:text-light-text-color"
                         >
