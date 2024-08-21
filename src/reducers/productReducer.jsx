@@ -38,6 +38,10 @@ const productReducer = (state = initialState, action) => {
       return { ...state, offset: action.payload };
     case SET_FILTER:
       return { ...state, filter: action.payload };
+    case SET_SORT:
+      return { ...state, sort: action.payload };
+    case SET_CATEGORYID:
+      return { ...state, categoryId: action.payload };
     default:
       return state;
   }

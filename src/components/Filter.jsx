@@ -1,6 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { fetchProducts, setSort } from "../actions/productReducerActions";
 
 export default function Filter() {
+  const dispatch = useDispatch();
+
+  const onChange = (evnt) => {
+    dispatch(setSort(evnt.target.value));
+    dispatch(fetchProducts(dispatch));
+  };
   return (
     <div className="w-full h-60 bg-light-background-color flex flex-col p-5 items-center lg:flex-row lg:justify-center lg:h-28 lg:p-0 lg:align-middle">
       <div className="flex flex-col items-center lg:w-[83rem] lg:flex lg:flex-row lg:justify-between">
@@ -16,8 +24,15 @@ export default function Filter() {
         </div>
         <div className="flex flex-row">
           <form>
-            <select className="border-[1px] p-4 bg-[#F9F9F9] text-">
-              <option>Popularity</option>
+            <select
+              onChange={onChange}
+              className="border-[1px] p-4 bg-[#F9F9F9] text-"
+            >
+              <option>Sort</option>
+              <option value="price:asc">Lowest first by price</option>
+              <option value="price:desc">Highest first by price</option>
+              <option value="rating:asc">Lowest first by rating</option>
+              <option value="rating:desc">Highest first by rating</option>
             </select>
             <button className="py-4 px-6 bg-primary-color text-light-text-color font-bold rounded-md ml-3">
               Filter

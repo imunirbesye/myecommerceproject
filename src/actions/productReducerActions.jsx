@@ -28,6 +28,11 @@ export const setFetchState = (fetchState) => ({
 export const setLimit = (limit) => ({ type: SET_LIMIT, payload: limit });
 export const setOffset = (offset) => ({ type: SET_OFFSET, payload: offset });
 export const setFilter = (filter) => ({ type: SET_FILTER, payload: filter });
+export const setSort = (sort) => ({ type: SET_SORT, payload: sort });
+export const setCategoryId = (categoryId) => ({
+  type: SET_CATEGORYID,
+  payload: categoryId,
+});
 
 export const fetchCategories = () => async (dispatch) => {
   axiosInstance
@@ -43,7 +48,21 @@ export const fetchCategories = () => async (dispatch) => {
 export const fetchProducts = () => async (dispatch) => {
   dispatch(setFetchState("FETCHING"));
   let categoryId = useSelector((store) => store.product.categoryId);
+
+  let filter = useSelector((store) => store.product.filter);
+  let sort = useSelector((store) => store.product.sort);
+
   let query = "/products";
+
+  if (categoryId != 0 && sort != "") {
+    query = `/products?category=${categoryId}&sort=${sort}`;
+  } else if (categoryId === 0 && sort != "") {
+    query = `/products?sort=${sort}`;
+    console.log(query);
+  } else if (categoryId != 0 && sort === "") {
+    query = `/products?category=${categoryId}`;
+  }
+
   axiosInstance
     .get(query)
     .then((res) => {
