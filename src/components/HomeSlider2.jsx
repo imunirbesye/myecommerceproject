@@ -4,20 +4,6 @@ import 'react-slideshow-image/dist/styles.css'
 
 import coverImage from "../assets/images/png-cover.png";
 
-const spanStyle = {
-    padding: '20px',
-    background: '#efefef',
-    color: '#000000'
-  }
-  
-  const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundSize: 'cover',
-    height: '400px'
-  } 
-
   const carouselDivs = [
     {
       content: <div className="w-full flex flex-col self-end justify-center lg:w-[70rem] lg:flex-row lg:self-end lg:justify-between lg:items-center ">

@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundColor: {
         "primary-color": "#23A6F0",
+        secondary: "#F3CD03",
         "secondary-color-1": "#23856D",
         "secondary-color-2": "#3C403D",
         "dark-background-color": "#252B42",
@@ -36,6 +37,7 @@ export default {
         "faded-primary-color": "#B2E3FF",
         "faded-secondary-color-1": "#B9EAA8",
         "faded-secondary-color-2": "#FFDCD1",
+        secondary: "#F3CD03",
       },
       fontFamily: {
         montserrat: "Montserrat",
